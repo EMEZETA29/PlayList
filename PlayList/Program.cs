@@ -1,3 +1,5 @@
+using PlayList.DATOS;
+using PlayList.DATOS.Repositorios;
 using PlayList.NEGOCIO;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ICalculo, Calculo>();
+builder.Services.AddScoped<IGeneroRepositorio, GeneroRepositorio>();
+builder.Services.AddScoped<IGeneroNegocio, GeneroNegocio>();
 
 var app = builder.Build();
 

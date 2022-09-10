@@ -1,0 +1,23 @@
+﻿@page
+@model PlayList.Pages.EliminarGeneroModel
+@{
+}
+<div class="d-flex justify-content-center">
+    <div class="card col-6">
+        <div class="card-header bg-black text-white">
+            <h3>Eliminar Genero</h3>
+        </div>
+        <form method="post">
+            <div class="card-body">
+                <p>¿Está seguro de eliminar el genero?</p>
+
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-page="/Generos" class="btn btn-secondary">Cancelar</a>
+            </div>
+
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+﻿@page
+@model PlayList.Pages.editar_generoModel
+@{
+}
+<div class="d-flex justify-content-center">
+    <div class="card col-6">
+        <div class="card-header bg-black text-white">
+            <h3>Editar Genero</h3>
+        </div>
+        <form method="post">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input maxlength="50" asp-for="Nombre" class="form-control" />
+                    <span class="text-danger" asp-validation-for="Nombre"></span>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <a asp-page="/Generos" class="btn btn-secondary">Cancelar</a>
+            </div>
+
+        </form>
+    </div>
+
+</div>

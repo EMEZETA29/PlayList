@@ -1,0 +1,38 @@
+﻿@page
+@model PlayList.Pages.GenerosModel
+@{
+}
+
+<div class="card">
+    <div class="card-header bg-primary text-white d-flex justify-content-between">
+        <h3>Listado de Generos Musicales</h3>
+        <a asp-page="/Nuevo-genero" class="btn btn-success"><i class="bi bi-patch-plus"></i> Agregar Genero</a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var genero in Model.Generos)
+                {
+                <tr>
+                    <td>@genero.IDGenero</td>
+                    <td>@genero.NombreGenero</td>
+                    <td>
+                            <a asp-page="editar-genero" asp-route-id="@genero.IDGenero" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+                            <a asp-page="/eliminargenero" asp-route-id="@genero.IDGenero" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
+                    </td>
+                </tr>
+                }
+                
+                
+            </tbody>
+        </table>
+
+    </div>
+</div>

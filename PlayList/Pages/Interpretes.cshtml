@@ -1,0 +1,41 @@
+﻿@page
+@model PlayList.Pages.InterpretesModel
+@{
+}
+<div class="card">
+    <div class="card-header bg-primary text-white d-flex justify-content-between">
+        <h3>Listado de Interpretes Musicales</h3>
+        <a asp-page="/Nuevo_interprete" class="btn btn-success"><i class="bi bi-patch-plus"></i> Agregar Interprete</a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Genero</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var interprete in Model.Interpretes)
+                {
+                    <tr>
+                        <td>@interprete.IDInterprete</td>
+                        <td>@interprete.NombreInterprete</td>
+                        <td>@interprete.FechaNacimiento</td>
+                        <td>@interprete.Genero</td>
+                        <td>
+                            <a asp-page="/Editar-interprete" asp-route-id="@interprete.IDInterprete" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+                            <a asp-page="/Eliminar-interprete" asp-route-id="@interprete.IDInterprete" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
+                        </td>
+                    </tr>
+                }
+               
+                
+            </tbody>
+        </table>
+
+    </div>
+</div>

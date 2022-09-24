@@ -1,0 +1,46 @@
+﻿@page
+@model PlayList.Pages.Nuevo_interpreteModel
+@{
+}
+<div class="d-flex justify-content-center">
+    <div class="card col-6">
+        <div class="card-header bg-black text-white">
+            <h3>Nuevo Interprete</h3>
+        </div>
+        <form method="post">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Nombre Interprete</label>
+                    <input asp-for="Interprete.NombreInterprete" type="text" maxlength="50" class="form-control" />
+                    <span asp-validation-for="Interprete.NombreInterprete" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Fecha Nacimiento</label>
+                    <input asp-for="Interprete.FechaNacimiento" type="date" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Pais</label>
+                    <input asp-for="Interprete.Pais" maxlength="50" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Imagen</label>
+                    <input asp-for="Interprete.ImagenUrl" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Genero</label>
+                    <select asp-for="Interprete.GeneroID" asp-items="Model.Generos" class="form-select">
+                        <option value="">--Seleccione--</option>
+                    </select>
+                    <span asp-validation-for="Interprete.GeneroID" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <a asp-page="/Interpretes" class="btn btn-secondary">Cancelar</a>
+            </div>
+
+        </form>
+    </div>
+
+</div>

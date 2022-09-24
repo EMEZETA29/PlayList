@@ -3,8 +3,22 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<div class="d-flex justify-content-between">
+    @foreach(var interprete in Model.Interpretes)
+    {
+    <div class="card col-3">
+        <div class="card-header">
+                <h4>@interprete.NombreInterprete</h4>
+            </div>
+            <div class="card-body">
+                <img class="img-fluid" src="@interprete.ImagenUrl" />
+            </div>
+            <div class="card-footer">
+                <p>@interprete.FechaNacimiento</p>
+                <p>@interprete.Pais</p>
+        </div>
+    </div>
 
-<div class="text-center">
-    <h1 class="display-4">Bienvenido</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    }
+    
 </div>

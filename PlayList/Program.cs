@@ -9,6 +9,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddScoped<ICalculo, Calculo>();
 builder.Services.AddScoped<IGeneroRepositorio, GeneroRepositorio>();
 builder.Services.AddScoped<IGeneroNegocio, GeneroNegocio>();
+builder.Services.AddScoped<IInterpreteRepositorio, InterpreteRepositorio>();
+builder.Services.AddScoped<IInterpreteNegocio, InterpreteNegocio>();
 
 var app = builder.Build();
 

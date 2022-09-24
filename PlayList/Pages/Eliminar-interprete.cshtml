@@ -1,0 +1,23 @@
+﻿@page
+@model PlayList.Pages.Eliminar_interpreteModel
+@{
+}
+<div class="d-flex justify-content-center">
+    <div class="card col-6">
+        <div class="card-header bg-black text-white">
+            <h3>Eliminar Interprete</h3>
+        </div>
+        <form method="post">
+            <div class="card-body">
+                <p>¿Está seguro de eliminar el interprete?</p>
+
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-page="/Interpretes" class="btn btn-secondary">Cancelar</a>
+            </div>
+
+        </form>
+    </div>
+
+</div>
